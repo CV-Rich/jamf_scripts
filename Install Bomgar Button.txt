@@ -12,8 +12,8 @@ if [ -d "/Applications/HelpDesk - Mac.app" ]; then
 fi
 
 # Proceeds with Install if Bomgar Button is not found
-URLDOWNLOAD="https://webserver.cajonvalley.net/tech/bomgar-scc-w0dc30zhf86x7gihz6xdi5gyd5gy7fgy16zw5hc408c90.dmg";
-NAME="/tmp/bomgar-scc-w0dc30zhf86x7gihz6xdi5gyd5gy7fgy16zw5hc408c90.dmg";
+URLDOWNLOAD="https://www.domin.com/pathtofile/bomgar-scc-{your identifier number here}.dmg";
+NAME="/tmp/bomgar-scc-{your identifier number here}.dmg";
 curl -k -o "$NAME" "$URLDOWNLOAD";
 sleep 5;
 
