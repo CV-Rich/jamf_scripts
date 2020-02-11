@@ -1,0 +1,37 @@
+﻿ ####################################################################################################
+#
+# Install Latest Version of Bomgar Button
+#
+####################################################################################################
+
+# Checks if Bomgar Button is already installed and stops the install if it is
+if [ -d "/Applications/HelpDesk - Mac.app" ]; then
+  echo "Bomgar Button is already installed."         
+  echo "Installation Cancelled"
+  exit
+fi
+
+# Proceeds with Install if Bomgar Button is not found
+URLDOWNLOAD="https://webserver.cajonvalley.net/tech/bomgar-scc-w0dc30zhf86x7gihz6xdi5gyd5gy7fgy16zw5hc408c90.dmg";
+NAME="/tmp/bomgar-scc-w0dc30zhf86x7gihz6xdi5gyd5gy7fgy16zw5hc408c90.dmg";
+curl -k -o "$NAME" "$URLDOWNLOAD";
+sleep 5;
+
+#DMG Mount and Run Installer
+VOLUME=$(hdiutil mount -private -noautoopen -noverify "$NAME" | grep Volumes | cut -f 3);
+cd $VOLUME
+#open /Volumes/bomgar-scc/"Double-Click To Start Support Session.app";
+open "Double-Click To Start Support Session.app";
+sleep 10;
+
+#Move app from desktop to applications folder
+LOGGED_USER=$(stat -f "%Su" /dev/console);
+mv /Users/$LOGGED_USER/Desktop/"HelpDesk - Mac.app" /Applications;
+
+echo "Bomgar Button was successfully installed!"
+exit
+else
+  echo "Download failed, please try again later or check your network connection.";
+fi
+
+
