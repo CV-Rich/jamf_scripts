@@ -1,7 +1,12 @@
 ﻿#!/bin/bash
 
+# This calls our custom branding script
 jamf policy -event custombrand
+
+# This writes our configs for NoMAD Login and NoMAD
 jamf policy -event nomadconfig
+
+# This installs Nomad
 jamf policy -event nomad
 
 killall -HUP loginwindow
