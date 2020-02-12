@@ -1,6 +1,6 @@
 ﻿#!/bin/bash
 
 cd /var
-mkdir ./cajonvalley
-cd /var/cajonvalley
-curl -L -O "http://tech.cajonvalley.net/media/CV_logo_480x480.png"
+mkdir ./branding
+cd /var/branding
+curl -L -O "http://link to your file.png"
