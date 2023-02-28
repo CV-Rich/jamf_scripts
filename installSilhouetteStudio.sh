@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # # Variables used in this script
-SILHOUETTE_URL='https://deploy.cajonvalley.net/SS_V4.5.180.001_M6R.dmg'
-DMG_PATH='/var/cajonvalley/SS_V4.5.180.001_M6R.dmg'
+SILHOUETTE_URL='https://ourLocalURL/SS_V4.5.180.001_M6R.dmg'
+DMG_PATH='/var/ourLocalFolderPath/SS_V4.5.180.001_M6R.dmg'
 
 # # Download requested file using curl and placing it in it's desired location
 /usr/bin/curl -L --silent "${SILHOUETTE_URL}" --output "${DMG_PATH}"
