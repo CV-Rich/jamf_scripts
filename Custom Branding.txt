@@ -1,6 +1,0 @@
-﻿#!/bin/bash
-
-cd /var
-mkdir ./branding
-cd /var/branding
-curl -L -O "http://link to your file.png"
